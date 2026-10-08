@@ -262,7 +262,7 @@
       "id": 14,
       "file": "14-how-do-i-set-sync-my-computer.md",
       "title": "How do I set up Sync on my computer?",
-      "url": "https://support.mozilla.org/en-US/kb/how-do-i-set-sync-my-computer?redirectslug=how-do-i-set-up-firefox-sync&redirectlocale=en-US",
+      "url": "https://support.mozilla.org/en-US/kb/how-do-i-set-sync-my-computer",
       "product": "firefox",
       "headings": [
         "Sign in or create an account to start Sync",
@@ -323,7 +323,7 @@
       "file": "17-how-do-i-request-refund-mozilla-vpn.md",
       "title": "How do I request a refund for Mozilla VPN?",
       "url": "https://support.mozilla.org/en-US/kb/how-do-i-request-refund-mozilla-vpn",
-      "product": "firefox",
+      "product": "mozilla-vpn",
       "headings": [
         "Request a refund through your Mozilla account",
         "Request a refund through the Mozilla VPN app",
@@ -339,7 +339,7 @@
       "file": "18-protonvpn.md",
       "title": "ProtonVPN",
       "url": "https://support.mozilla.org/en-US/kb/protonvpn",
-      "product": "firefox",
+      "product": "proton-vpn",
       "headings": [
         "Questions about installing or using ProtonVPN",
         "Billing questions",

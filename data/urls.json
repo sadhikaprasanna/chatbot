@@ -15,6 +15,6 @@
   {"id": 14, "product": "firefox", "url": "https://support.mozilla.org/en-US/kb/how-do-i-set-sync-my-computer"},
   {"id": 15, "product": "firefox", "url": "https://support.mozilla.org/en-US/kb/firefox-cant-load-websites-other-browsers-can"},
   {"id": 16, "product": "firefox", "url": "https://support.mozilla.org/en-US/kb/uninstall-firefox-from-your-computer"},
-  {"id": 17, "product": "firefox", "url": "https://support.mozilla.org/en-US/kb/how-do-i-request-refund-mozilla-vpn"},
-  {"id": 18, "product": "firefox", "url": "https://support.mozilla.org/en-US/kb/protonvpn"}
+  {"id": 17, "product": "mozilla-vpn", "url": "https://support.mozilla.org/en-US/kb/how-do-i-request-refund-mozilla-vpn"},
+  {"id": 18, "product": "proton-vpn", "url": "https://support.mozilla.org/en-US/kb/protonvpn"}
 ]
