@@ -1,0 +1,20 @@
+[
+  {"id": 1, "product": "firefox", "url": "https://support.mozilla.org/en-US/kb/refresh-firefox-reset-add-ons-and-settings"},
+  {"id": 2, "product": "firefox", "url": "https://support.mozilla.org/en-US/kb/diagnose-firefox-issues-using-troubleshoot-mode"},
+  {"id": 3, "product": "firefox", "url": "https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox"},
+  {"id": 4, "product": "firefox", "url": "https://support.mozilla.org/en-US/kb/how-clear-firefox-cache"},
+  {"id": 5, "product": "firefox", "url": "https://support.mozilla.org/en-US/kb/update-firefox-latest-release"},
+  {"id": 6, "product": "firefox", "url": "https://support.mozilla.org/en-US/kb/firefox-uses-too-much-memory-or-cpu-resources"},
+  {"id": 7, "product": "firefox", "url": "https://support.mozilla.org/en-US/kb/password-manager-remember-delete-edit-logins"},
+  {"id": 8, "product": "firefox", "url": "https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop"},
+  {"id": 9, "product": "firefox", "url": "https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history"},
+  {"id": 10, "product": "firefox", "url": "https://support.mozilla.org/en-US/kb/make-firefox-your-default-browser"},
+  {"id": 11, "product": "firefox", "url": "https://support.mozilla.org/en-US/kb/recover-lost-or-missing-bookmarks"},
+  {"id": 12, "product": "firefox", "url": "https://support.mozilla.org/en-US/kb/export-firefox-bookmarks-to-backup-or-transfer"},
+  {"id": 13, "product": "firefox", "url": "https://support.mozilla.org/en-US/kb/disable-or-remove-add-ons"},
+  {"id": 14, "product": "firefox", "url": "https://support.mozilla.org/en-US/kb/how-do-i-set-sync-my-computer"},
+  {"id": 15, "product": "firefox", "url": "https://support.mozilla.org/en-US/kb/firefox-cant-load-websites-other-browsers-can"},
+  {"id": 16, "product": "firefox", "url": "https://support.mozilla.org/en-US/kb/uninstall-firefox-from-your-computer"},
+  {"id": 17, "product": "firefox", "url": "https://support.mozilla.org/en-US/kb/how-do-i-request-refund-mozilla-vpn"},
+  {"id": 18, "product": "firefox", "url": "https://support.mozilla.org/en-US/kb/protonvpn"}
+]
