@@ -1,0 +1,357 @@
+{
+  "generated": "2026-10-08",
+  "articles": [
+    {
+      "id": 1,
+      "file": "01-refresh-firefox-reset-add-ons-and-settings.md",
+      "title": "Refresh Firefox - reset add-ons and settings",
+      "url": "https://support.mozilla.org/en-US/kb/refresh-firefox-reset-add-ons-and-settings",
+      "product": "firefox",
+      "headings": [
+        "Refresh Firefox",
+        "What does the refresh feature do?",
+        "Firefox will save these items",
+        "These items and settings will be removed"
+      ],
+      "word_count": 445,
+      "selector": "#doc-content",
+      "downloaded": "2026-10-08",
+      "sha256": "f754b5de4b1a6a7c1867d36707e809582f13cb04160d9189feedad0433f62f8c"
+    },
+    {
+      "id": 2,
+      "file": "02-diagnose-firefox-issues-using-troubleshoot-mode.md",
+      "title": "Use Troubleshoot Mode in Firefox",
+      "url": "https://support.mozilla.org/en-US/kb/diagnose-firefox-issues-using-troubleshoot-mode",
+      "product": "firefox",
+      "headings": [
+        "Start Firefox in Troubleshoot Mode",
+        "Troubleshoot Mode window",
+        "Diagnose problems in Troubleshoot Mode",
+        "The problem happens in Troubleshoot Mode",
+        "The problem does not happen in Troubleshoot Mode",
+        "Exit Troubleshoot Mode",
+        "What does Troubleshoot Mode disable?"
+      ],
+      "word_count": 482,
+      "selector": "#doc-content",
+      "downloaded": "2026-10-08",
+      "sha256": "e804524c6455bd3cf84014d4aaeebb418b6230f4d9de576ffc5f1014ec5324ee"
+    },
+    {
+      "id": 3,
+      "file": "03-clear-cookies-and-site-data-firefox.md",
+      "title": "Clear cookies and site data in Firefox",
+      "url": "https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox",
+      "product": "firefox",
+      "headings": [
+        "Clear cookies for the current website",
+        "Clear cookies for any website",
+        "Clear all cookies, site data and cache",
+        "Clear all cookies and keep other data"
+      ],
+      "word_count": 558,
+      "selector": "#doc-content",
+      "downloaded": "2026-10-08",
+      "sha256": "dd894daeef59964044d626798cb5f7dfca69afeb68e47805992219ff4fb2d727"
+    },
+    {
+      "id": 4,
+      "file": "04-how-clear-firefox-cache.md",
+      "title": "How to clear the Firefox cache",
+      "url": "https://support.mozilla.org/en-US/kb/how-clear-firefox-cache",
+      "product": "firefox",
+      "headings": [
+        "Clear the cache",
+        "Automatically clear the cache"
+      ],
+      "word_count": 628,
+      "selector": "#doc-content",
+      "downloaded": "2026-10-08",
+      "sha256": "4b22c1119f3d92600c495c0372813111d74beac685c5c6d540637b2736cb44b4"
+    },
+    {
+      "id": 5,
+      "file": "05-update-firefox-latest-release.md",
+      "title": "Update Firefox to the latest release",
+      "url": "https://support.mozilla.org/en-US/kb/update-firefox-latest-release",
+      "product": "firefox",
+      "headings": [
+        "Update Firefox",
+        "Configure how Firefox installs updates",
+        "Troubleshooting update problems"
+      ],
+      "word_count": 425,
+      "selector": "#doc-content",
+      "downloaded": "2026-10-08",
+      "sha256": "74f695b1734c18eb5806fe3dbe55a679e2e60cd04730cdeceb786238e41ff8fa"
+    },
+    {
+      "id": 6,
+      "file": "06-firefox-uses-too-much-memory-or-cpu-resources.md",
+      "title": "Fix Firefox using too much memory or CPU resources",
+      "url": "https://support.mozilla.org/en-US/kb/firefox-uses-too-much-memory-or-cpu-resources",
+      "product": "firefox",
+      "headings": [
+        "Update to the latest version",
+        "Check for problematic extensions and themes",
+        "Hide intrusive content",
+        "Use fewer tabs",
+        "Close tabs that use too many system resources",
+        "Check Firefox hardware acceleration",
+        "Close other applications",
+        "Delete content-prefs.sqlite file",
+        "Refresh Firefox",
+        "Use additional troubleshooting tools",
+        "Firefox tools",
+        "Operating system tools",
+        "Restart Firefox",
+        "Restart your computer",
+        "Address hardware-related performance issues"
+      ],
+      "word_count": 1296,
+      "selector": "#doc-content",
+      "downloaded": "2026-10-08",
+      "sha256": "1b00fc86d963fe7e726f4f253e411445ab0e1dce6fbb054d13ccdb19d5505276"
+    },
+    {
+      "id": 7,
+      "file": "07-password-manager-remember-delete-edit-logins.md",
+      "title": "Password Manager - Remember, delete and edit logins and passwords in Firefox",
+      "url": "https://support.mozilla.org/en-US/kb/password-manager-remember-delete-edit-logins",
+      "product": "firefox",
+      "headings": [
+        "Save usernames and passwords",
+        "Add or manage multiple accounts for a site",
+        "Add another login account",
+        "View, edit, or delete saved passwords",
+        "From the Menu panel",
+        "From the Firefox sidebar",
+        "Remove all saved passwords",
+        "Export or import passwords",
+        "Protect your saved passwords",
+        "Disable the Firefox password management feature",
+        "Troubleshoot lost or missing passwords",
+        "Firefox passwords vs. Google passwords"
+      ],
+      "word_count": 1450,
+      "selector": "#doc-content",
+      "downloaded": "2026-10-08",
+      "sha256": "380e017d1649e8a27a40c5b146ddf9ea2e50a09bc60e1b3bca17a7cfa52ad798"
+    },
+    {
+      "id": 8,
+      "file": "08-enhanced-tracking-protection-firefox-desktop.md",
+      "title": "Enhanced Tracking Protection in Firefox for desktop",
+      "url": "https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop",
+      "product": "firefox",
+      "headings": [
+        "Protections Dashboard",
+        "What Enhanced Tracking Protection blocks",
+        "Bounce Tracking Protection",
+        "How to tell when Firefox is protecting you",
+        "Shield animation feature",
+        "How to tell what\u2019s being blocked on a site",
+        "What to do if a site seems broken",
+        "Report a broken site",
+        "Adjust your global Enhanced Tracking Protection settings",
+        "Standard Enhanced Tracking Protection",
+        "Strict Enhanced Tracking Protection",
+        "Custom Enhanced Tracking Protection",
+        "WebCompat exception checkboxes",
+        "Copy Clean Link",
+        "Copy from the address bar",
+        "Copy from in-page links"
+      ],
+      "word_count": 2029,
+      "selector": "#doc-content",
+      "downloaded": "2026-10-08",
+      "sha256": "94a3cb577e35bc56faa357dd3da38207e1e5d273fa80f37887e1f89d593a013f"
+    },
+    {
+      "id": 9,
+      "file": "09-private-browsing-use-firefox-without-history.md",
+      "title": "Private Browsing - Use Firefox without saving history",
+      "url": "https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history",
+      "product": "firefox",
+      "headings": [
+        "How do I open a new Private Window?",
+        "How do I close a Private Browsing session?",
+        "What does Private Browsing not save?",
+        "Can I set Firefox to always use Private Browsing?",
+        "Other ways to control what information Firefox saves"
+      ],
+      "word_count": 1008,
+      "selector": "#doc-content",
+      "downloaded": "2026-10-08",
+      "sha256": "114b005a4cd9144639b151042f9ba978a5f7b1c6272320505f1d4edceda0e111"
+    },
+    {
+      "id": 10,
+      "file": "10-make-firefox-your-default-browser.md",
+      "title": "Make Firefox your default browser",
+      "url": "https://support.mozilla.org/en-US/kb/make-firefox-your-default-browser",
+      "product": "firefox",
+      "headings": [
+        "How to set Firefox as your default browser",
+        "Use the Settings app in Windows 10 to change your default browser",
+        "Related content"
+      ],
+      "word_count": 606,
+      "selector": "#doc-content",
+      "downloaded": "2026-10-08",
+      "sha256": "69c41d55bfb50ac7c2f180a0814aaaec78d44ba22bf23721e96cd0cbb33cf7bd"
+    },
+    {
+      "id": 11,
+      "file": "11-recover-lost-or-missing-bookmarks.md",
+      "title": "Recover lost or missing Bookmarks",
+      "url": "https://support.mozilla.org/en-US/kb/recover-lost-or-missing-bookmarks",
+      "product": "firefox",
+      "headings": [
+        "Find the likely cause",
+        "I can see only the default set of bookmarks in the Bookmarks folder",
+        "Determine if Firefox has created a new profile",
+        "Firefox creates a new profile each time it starts",
+        "My Bookmarks Toolbar is missing",
+        "I can't find all of my bookmarks and folders",
+        "My bookmarks have disappeared",
+        "There is an \"Old Firefox Data\" folder on my desktop",
+        "No bookmarks are visible after installing an add-on",
+        "I can't find my bookmarks after importing them",
+        "When bookmarks cannot be recovered"
+      ],
+      "word_count": 1415,
+      "selector": "#doc-content",
+      "downloaded": "2026-10-08",
+      "sha256": "1c43ab10a0ab0ac5980f8335ca7d7695c05a6623a96510778171e7ed00917318"
+    },
+    {
+      "id": 12,
+      "file": "12-export-firefox-bookmarks-to-backup-or-transfer.md",
+      "title": "Export Firefox bookmarks to an HTML file to back up or transfer bookmarks",
+      "url": "https://support.mozilla.org/en-US/kb/export-firefox-bookmarks-to-backup-or-transfer",
+      "product": "firefox",
+      "headings": [],
+      "word_count": 358,
+      "selector": "#doc-content",
+      "downloaded": "2026-10-08",
+      "sha256": "29ab60db035847e2480203615ab51df0c4a6be7f2feaa649f71ef8ab951d83fc"
+    },
+    {
+      "id": 13,
+      "file": "13-disable-or-remove-add-ons.md",
+      "title": "Disable or remove Add-ons",
+      "url": "https://support.mozilla.org/en-US/kb/disable-or-remove-add-ons",
+      "product": "firefox",
+      "headings": [
+        "Disabling and removing extensions",
+        "Disabling extensions",
+        "Removing extensions",
+        "Disabling and removing themes",
+        "Disabling themes",
+        "Removing themes",
+        "Troubleshooting"
+      ],
+      "word_count": 492,
+      "selector": "#doc-content",
+      "downloaded": "2026-10-08",
+      "sha256": "7c065bfea9496115bdc2dbf80b0e76137d3640da54957682426cfb0080fe3236"
+    },
+    {
+      "id": 14,
+      "file": "14-how-do-i-set-sync-my-computer.md",
+      "title": "How do I set up Sync on my computer?",
+      "url": "https://support.mozilla.org/en-US/kb/how-do-i-set-sync-my-computer?redirectslug=how-do-i-set-up-firefox-sync&redirectlocale=en-US",
+      "product": "firefox",
+      "headings": [
+        "Sign in or create an account to start Sync",
+        "Enter your email address",
+        "Confirm your new account (if applicable)",
+        "Choose what to sync",
+        "Connect additional devices to Sync",
+        "Troubleshoot Sync sign-in and account access",
+        "I can't find the Sign in button",
+        "I no longer have access to my email address",
+        "I recovered or reinstalled Windows and my Firefox data is missing",
+        "Disable Sync for previously synced devices"
+      ],
+      "word_count": 1084,
+      "selector": "#doc-content",
+      "downloaded": "2026-10-08",
+      "sha256": "e4c7f4827d3f6ba74f23346bdb89bcba6c8f324cf5cd8bc6085b5380ad1c229f"
+    },
+    {
+      "id": 15,
+      "file": "15-firefox-cant-load-websites-other-browsers-can.md",
+      "title": "Firefox can't load websites but other browsers can",
+      "url": "https://support.mozilla.org/en-US/kb/firefox-cant-load-websites-other-browsers-can",
+      "product": "firefox",
+      "headings": [
+        "Internet Security software blocking Firefox",
+        "Firefox connection settings",
+        "IPv6",
+        "DNS Prefetching",
+        "Firefox cannot load certain websites",
+        "Check for malware",
+        "Check if an extension is causing the problem"
+      ],
+      "word_count": 907,
+      "selector": "#doc-content",
+      "downloaded": "2026-10-08",
+      "sha256": "1c4268da2942c5bd5c6e9dbde3272230cc0db1ef46fa8689485be0a259fc17da"
+    },
+    {
+      "id": 16,
+      "file": "16-uninstall-firefox-from-your-computer.md",
+      "title": "Uninstall Firefox from your computer",
+      "url": "https://support.mozilla.org/en-US/kb/uninstall-firefox-from-your-computer",
+      "product": "firefox",
+      "headings": [
+        "Uninstall Firefox",
+        "Start the Mozilla Firefox uninstall",
+        "Complete the Mozilla Firefox uninstall",
+        "Remove user data and settings"
+      ],
+      "word_count": 1385,
+      "selector": "#doc-content",
+      "downloaded": "2026-10-08",
+      "sha256": "8757e70cbf1740314baf3f9f52824ab1f6b7d6f4466f607aaa56069edf335186"
+    },
+    {
+      "id": 17,
+      "file": "17-how-do-i-request-refund-mozilla-vpn.md",
+      "title": "How do I request a refund for Mozilla VPN?",
+      "url": "https://support.mozilla.org/en-US/kb/how-do-i-request-refund-mozilla-vpn",
+      "product": "firefox",
+      "headings": [
+        "Request a refund through your Mozilla account",
+        "Request a refund through the Mozilla VPN app",
+        "Request a refund through the Mozilla VPN support Knowledge Base"
+      ],
+      "word_count": 417,
+      "selector": "#doc-content",
+      "downloaded": "2026-10-08",
+      "sha256": "24fa421c29d944673066519ca8d651e9832f5ec3e46e3678c45e6c188ae86b0f"
+    },
+    {
+      "id": 18,
+      "file": "18-protonvpn.md",
+      "title": "ProtonVPN",
+      "url": "https://support.mozilla.org/en-US/kb/protonvpn",
+      "product": "firefox",
+      "headings": [
+        "Questions about installing or using ProtonVPN",
+        "Billing questions",
+        "How do I cancel my subscription to ProtonVPN?",
+        "How do I update my billing information?",
+        "How do I request a refund?"
+      ],
+      "word_count": 635,
+      "selector": "#doc-content",
+      "downloaded": "2026-10-08",
+      "sha256": "5b7986083a768f0ee2ca6a31573b7aba5438851268438e4fa73178e18227e799"
+    }
+  ],
+  "skipped": []
+}
