@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "requested_url": "https://support.mozilla.org/en-US/kb/refresh-firefox-reset-add-ons-and-settings",
+    "final_url": null,
+    "status": 200,
+    "downloaded": "2026-10-08",
+    "error": "NameError: name 'time' is not defined"
+  },
+  {
+    "id": 2,
+    "requested_url": "https://support.mozilla.org/en-US/kb/diagnose-firefox-issues-using-troubleshoot-mode",
+    "final_url": null,
+    "status": 200,
+    "downloaded": "2026-10-08",
+    "error": "NameError: name 'time' is not defined"
+  },
+  {
+    "id": 3,
+    "requested_url": "https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox",
+    "final_url": null,
+    "status": 200,
+    "downloaded": "2026-10-08",
+    "error": "NameError: name 'time' is not defined"
+  },
+  {
+    "id": 4,
+    "requested_url": "https://support.mozilla.org/en-US/kb/how-clear-firefox-cache",
+    "final_url": null,
+    "status": 200,
+    "downloaded": "2026-10-08",
+    "error": "NameError: name 'time' is not defined"
+  },
+  {
+    "id": 5,
+    "requested_url": "https://support.mozilla.org/en-US/kb/update-firefox-latest-release",
+    "final_url": null,
+    "status": 200,
+    "downloaded": "2026-10-08",
+    "error": "NameError: name 'time' is not defined"
+  },
+  {
+    "id": 6,
+    "requested_url": "https://support.mozilla.org/en-US/kb/firefox-uses-too-much-memory-or-cpu-resources",
+    "final_url": null,
+    "status": 200,
+    "downloaded": "2026-10-08",
+    "error": "NameError: name 'time' is not defined"
+  },
+  {
+    "id": 7,
+    "requested_url": "https://support.mozilla.org/en-US/kb/password-manager-remember-delete-edit-logins",
+    "final_url": null,
+    "status": 200,
+    "downloaded": "2026-10-08",
+    "error": "NameError: name 'time' is not defined"
+  },
+  {
+    "id": 8,
+    "requested_url": "https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop",
+    "final_url": null,
+    "status": 200,
+    "downloaded": "2026-10-08",
+    "error": "NameError: name 'time' is not defined"
+  },
+  {
+    "id": 9,
+    "requested_url": "https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history",
+    "final_url": null,
+    "status": 200,
+    "downloaded": "2026-10-08",
+    "error": "NameError: name 'time' is not defined"
+  },
+  {
+    "id": 10,
+    "requested_url": "https://support.mozilla.org/en-US/kb/make-firefox-your-default-browser",
+    "final_url": null,
+    "status": 200,
+    "downloaded": "2026-10-08",
+    "error": "NameError: name 'time' is not defined"
+  },
+  {
+    "id": 11,
+    "requested_url": "https://support.mozilla.org/en-US/kb/recover-lost-or-missing-bookmarks",
+    "final_url": null,
+    "status": 200,
+    "downloaded": "2026-10-08",
+    "error": "NameError: name 'time' is not defined"
+  },
+  {
+    "id": 12,
+    "requested_url": "https://support.mozilla.org/en-US/kb/export-firefox-bookmarks-to-backup-or-transfer",
+    "final_url": null,
+    "status": 200,
+    "downloaded": "2026-10-08",
+    "error": "NameError: name 'time' is not defined"
+  },
+  {
+    "id": 13,
+    "requested_url": "https://support.mozilla.org/en-US/kb/disable-or-remove-add-ons",
+    "final_url": null,
+    "status": 200,
+    "downloaded": "2026-10-08",
+    "error": "NameError: name 'time' is not defined"
+  },
+  {
+    "id": 14,
+    "requested_url": "https://support.mozilla.org/en-US/kb/how-do-i-set-up-firefox-sync",
+    "final_url": null,
+    "status": 200,
+    "downloaded": "2026-10-08",
+    "error": "NameError: name 'time' is not defined"
+  },
+  {
+    "id": 15,
+    "requested_url": "https://support.mozilla.org/en-US/kb/firefox-cant-load-websites-other-browsers-can",
+    "final_url": null,
+    "status": 200,
+    "downloaded": "2026-10-08",
+    "error": "NameError: name 'time' is not defined"
+  },
+  {
+    "id": 16,
+    "requested_url": "https://support.mozilla.org/en-US/kb/uninstall-firefox-from-your-computer",
+    "final_url": null,
+    "status": 200,
+    "downloaded": "2026-10-08",
+    "error": "NameError: name 'time' is not defined"
+  },
+  {
+    "id": 17,
+    "requested_url": "https://support.mozilla.org/en-US/kb/how-do-i-request-refund-mozilla-vpn",
+    "final_url": null,
+    "status": 200,
+    "downloaded": "2026-10-08",
+    "error": "NameError: name 'time' is not defined"
+  },
+  {
+    "id": 18,
+    "requested_url": "https://support.mozilla.org/en-US/kb/protonvpn",
+    "final_url": null,
+    "status": 200,
+    "downloaded": "2026-10-08",
+    "error": "NameError: name 'time' is not defined"
+  }
+]
