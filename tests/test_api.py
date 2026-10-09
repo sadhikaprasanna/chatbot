@@ -1,5 +1,6 @@
 from fastapi.testclient import TestClient
-
+import pytest
+from fastapi.exceptions import ResponseValidationError
 from app import main
 
 client = TestClient(main.app)
@@ -56,7 +57,9 @@ def test_pipeline_crash_returns_safe_json(monkeypatch):
 
 
 
-def test_invalid_status_cannot_leak(monkeypatch):
+
+def test_invalid_status_degrades_to_safe_refusal(monkeypatch):
     monkeypatch.setattr(main.pipeline, "handle", fake("weird"))
-    with pytest.raises(ResponseValidationError):
-        client.post("/chat", json={"session_id": "s", "message": "hello"})
+    r = client.post("/chat", json={"session_id": "s", "message": "hello"})
+    assert r.status_code == 200
+    assert r.json()["status"] == "out_of_scope"
