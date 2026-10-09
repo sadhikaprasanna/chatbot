@@ -32,6 +32,33 @@ def _default() -> Retriever:
 def retrieve(query: str, k: int | None = None) -> list[dict]:
     return _default().retrieve(query, k)
 
+import re
+
+STEP_Q = re.compile(r"\b(how (do|can|could|should|to)|steps?|walk me through|instructions?)\b", re.I)
+HAS_STEPS = re.compile(r"^\s*\d+\.\s", re.M)
+
+def select_context(query: str, hits: list[dict], max_chunks: int = 4,
+                   budget_words: int = 400, step_boost: float = 0.15) -> list[dict]:
+    """Choose the chunks sent to the LLM. Raw scores are untouched (the gate uses them)."""
+    procedural = bool(STEP_Q.search(query))
+
+    def adj(h):
+        return h["score"] + (step_boost if procedural and HAS_STEPS.search(h["text"]) else 0.0)
+
+    chosen, words = [], 0
+    for h in sorted(hits, key=adj, reverse=True):
+        w = len(h["text"].split())
+        if chosen and words + w > budget_words:
+            continue
+        chosen.append(h)
+        words += w
+        if len(chosen) == max_chunks:
+            break
+    order = {}
+    for h in chosen:                                  # chosen is in rank order
+        order.setdefault(h["article_id"], len(order))
+    return sorted(chosen, key=lambda h: (order[h["article_id"]], h["index"]))
+
 
 if __name__ == "__main__":
     for r in retrieve(" ".join(sys.argv[1:]) or "how do I refresh Firefox?"):

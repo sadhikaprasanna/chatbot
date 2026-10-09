@@ -78,3 +78,23 @@ def test_history_is_bounded():
     for i in range(50):
         s.add_user(str(i))
     assert len(s.history) <= 2 * sessions.MAX_TURNS
+
+def test_short_human_requests():
+    for m in ["I want a human", "human please", "I need an agent", "get me a person"]:
+        assert safety.wants_human(m), m
+
+
+
+from app.retriever import select_context
+
+def _h(cid, idx, score, text):
+    return {"chunk_id": cid, "article_id": 1, "index": idx, "score": score, "text": text}
+
+def test_step_chunk_beats_higher_scoring_list_chunk():
+    hits = [_h("01-004", 4, 0.73, "* Bookmarks\n* Passwords"),
+            _h("01-001", 1, 0.60, "1. Click Help\n2. Choose More")]
+    assert select_context("How do I refresh Firefox?", hits, max_chunks=1)[0]["chunk_id"] == "01-001"
+
+def test_non_procedural_question_gets_no_boost():
+    hits = [_h("01-004", 4, 0.73, "* Bookmarks"), _h("01-001", 1, 0.60, "1. Click Help")]
+    assert select_context("What does refresh keep?", hits, max_chunks=1)[0]["chunk_id"] == "01-004"

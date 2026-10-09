@@ -20,6 +20,8 @@ HANDOFF_PATTERNS = [
     r"\b(customer service|support) (agent|rep|representative)\b",
     r"connect me (to|with)",
     r"\bescalate\b",
+    r"\b(want|need|get|give me|get me) (to (talk|speak) to )?(a |an |the )?(human|person|agent|representative|someone)\b",
+    r"^\s*(a )?(human|agent|representative)( please)?\W*$",
 ]
 _INJ = [re.compile(p, re.I) for p in INJECTION_PATTERNS]
 _HAND = [re.compile(p, re.I) for p in HANDOFF_PATTERNS]
