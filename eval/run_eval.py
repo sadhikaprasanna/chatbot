@@ -58,13 +58,13 @@ def ranked_articles(log: dict) -> list[int]:
 
 
 def order_ok(answer: str, phrases: list[str]) -> bool:
-    low, pos = answer.lower(), []
+    low, pos = answer.lower(), 0
     for p in phrases:
-        i = low.find(p.lower())
+        i = low.find(p.lower(), pos)
         if i < 0:
             return False
-        pos.append(i)
-    return pos == sorted(pos)
+        pos = i + len(p)
+    return True
 
 
 def judge(answer: str, context_ids: list[str], col) -> tuple[bool | None, list[str]]:

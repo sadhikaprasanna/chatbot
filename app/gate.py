@@ -36,10 +36,13 @@ class Decision:
     reason: str
     message: str = ""      # text to show the user when not proceeding
 
+_VAGUE_SHORT = re.compile(r"^(it|this|that|everything)\b.*\b(not working|isn'?t working|doesn'?t work|does not work|broken|not right)\b", re.I)
 
 def is_vague(text: str) -> bool:
-    t = text.strip().lower().rstrip("!.")
+    t = text.strip().lower().rstrip("!.?")
     if t in VAGUE_EXACT or len(t) < 3:
+        return True
+    if len(t.split()) <= 6 and _VAGUE_SHORT.search(t):
         return True
     return any(p.search(t) for p in _VAGUE)
 

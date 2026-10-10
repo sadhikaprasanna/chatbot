@@ -38,9 +38,20 @@ STEP_Q = re.compile(r"\b(how (do|can|could|should|to)|steps?|walk me through|ins
 HAS_STEPS = re.compile(r"^\s*\d+\.\s", re.M)
 
 def select_context(query: str, hits: list[dict], max_chunks: int = 4,
-                   budget_words: int = 400, step_boost: float = 0.15) -> list[dict]:
+                   budget_words: int = 400, step_boost: float = 0.15,
+                   article_margin: float = 0.05) -> list[dict]:
     """Choose the chunks sent to the LLM. Raw scores are untouched (the gate uses them)."""
+    if not hits:
+        return []
     procedural = bool(STEP_Q.search(query))
+
+    # keep only articles whose best raw score is close to the overall best
+    best = max(h["score"] for h in hits)
+    art_best = {}
+    for h in hits:
+        art_best[h["article_id"]] = max(art_best.get(h["article_id"], 0.0), h["score"])
+    keep = {a for a, s in art_best.items() if s >= best - article_margin}
+    hits = [h for h in hits if h["article_id"] in keep]
 
     def adj(h):
         return h["score"] + (step_boost if procedural and HAS_STEPS.search(h["text"]) else 0.0)
@@ -55,7 +66,7 @@ def select_context(query: str, hits: list[dict], max_chunks: int = 4,
         if len(chosen) == max_chunks:
             break
     order = {}
-    for h in chosen:                                  # chosen is in rank order
+    for h in chosen:
         order.setdefault(h["article_id"], len(order))
     return sorted(chosen, key=lambda h: (order[h["article_id"]], h["index"]))
 

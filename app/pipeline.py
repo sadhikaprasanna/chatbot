@@ -1,6 +1,7 @@
 """The request path: message -> response dict matching the /chat contract."""
 import json
 import time
+import re
 from datetime import datetime, timezone
 
 from app import config, gate, grounding, rewrite, safety, sessions
@@ -84,6 +85,14 @@ def _run(s, message: str, log: dict) -> dict:
             s.record("out_of_scope")
             return _after_failure(s, "out_of_scope", gate.OUT_OF_SCOPE_MSG, "prompt_injection")
 
+    # a vague message after a failed turn (or with no context) is judged on the raw text,
+    # because the rewrite step can turn "it still isn't working" into a different query
+    if gate.is_vague(clean) and (not s.history or s.failures > 0):
+        s.last_user_issue = clean[:200]
+        d = gate.decide(clean, [])
+        log["reason"] = d.reason
+        s.record(d.action)
+        return _after_failure(s, d.action, d.message, d.reason)
     # 3. resolve follow-ups
     query, u1 = rewrite.rewrite(s.history, clean)
     log["rewritten_query"] = query
@@ -117,16 +126,40 @@ def _run(s, message: str, log: dict) -> dict:
                      "completion": u1["completion_tokens"] + u2["completion_tokens"]}
     ratio = grounding.support_ratio(answer, ctx)
     log["support_ratio"] = round(ratio, 2)
+    kept, dropped = grounding.filter_supported(answer, ctx)
+    if not kept:
+        log["reason"] = "ungrounded"
+        s.record("out_of_scope")
+        return _after_failure(s, "out_of_scope", NO_GROUND, "ungrounded")
+    answer = "\n".join(kept)
+    answer = re.sub(r"\s*\[\d+\]", "", answer)
+    if dropped:
+        answer += "\n\nI can't help with the rest of that question, as it isn't covered in our help articles."
+        log["dropped_unsupported"] = True
     if not answer or not used or ratio < SUPPORT_MIN:
         log["reason"] = "ungrounded"
         s.record("out_of_scope")
         return _after_failure(s, "out_of_scope", NO_GROUND, "ungrounded")
+    own = [x for x in kept if not x.lower().startswith(("i can't help", "i cannot help"))]
+    dropped = dropped or len(own) < len(kept)       # the model's own "can't help" line is replaced by ours
+    final = "\n".join(own)
+    ratio = grounding.support_ratio(final, ctx)
+    log["support_ratio"] = round(ratio, 2)
+    if not own or not used or ratio < SUPPORT_MIN:
+        log["reason"] = "ungrounded"
+        s.record("out_of_scope")
+        return _after_failure(s, "out_of_scope", NO_GROUND, "ungrounded")
+    final = re.sub(r"\s*\[\d+\]", "", final)
     cites = _citations(ctx, used)
-    if grounding.claims_action(answer):
-        answer = ACTION_NOTE
+    if grounding.claims_action(final):
+        final = ACTION_NOTE
         log["reason"] = "action_claim_replaced"
+    elif dropped:
+        final += "\n\nNote: I left out part of my draft answer because it isn't covered in our help articles."
+        log["dropped_unsupported"] = True
     s.record("answered", [c["url"] for c in cites])
-    return _response("answered", answer, cites)
+    return _response("answered", final, cites)
+    
 
 
 def _after_failure(s, status: str, message: str, why: str) -> dict:

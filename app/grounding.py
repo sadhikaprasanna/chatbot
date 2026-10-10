@@ -16,6 +16,7 @@ def content_words(text: str) -> set[str]:
 
 def support_ratio(answer: str, chunks: list[dict]) -> float:
     """Share of the answer's content words that appear in the retrieved text."""
+    answer = re.sub(r"\[\d+\]|\bsources?\b", "", answer, flags=re.I)
     words = content_words(answer)
     if not words:
         return 0.0
@@ -25,3 +26,9 @@ def support_ratio(answer: str, chunks: list[dict]) -> float:
 
 def claims_action(answer: str) -> bool:
     return bool(ACTION_CLAIMS.search(answer))
+
+def filter_supported(answer: str, chunks: list[dict], min_ratio: float = 0.5):
+    """Drop sentences whose content words are mostly absent from the sources."""
+    parts = [s.strip() for s in re.split(r"(?<=[a-z\)][.!?])\s+|\n+", answer) if s.strip()]
+    kept = [s for s in parts if not content_words(s) or support_ratio(s, chunks) >= min_ratio]
+    return kept, len(kept) < len(parts)
