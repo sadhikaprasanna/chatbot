@@ -95,6 +95,20 @@ def test_step_chunk_beats_higher_scoring_list_chunk():
             _h("01-001", 1, 0.60, "1. Click Help\n2. Choose More")]
     assert select_context("How do I refresh Firefox?", hits, max_chunks=1)[0]["chunk_id"] == "01-001"
 
+def test_greeting_detected():
+    assert gate.is_greeting("Hello!")
+    assert not gate.is_greeting("Help")
+
+def test_greeting_after_answered_turn_is_not_rewritten():
+    from app import pipeline, sessions
+    sessions.reset_all()
+    s = sessions.get_session("g1")
+    s.add_user("How do I make Firefox my default browser?")
+    s.add_assistant("Steps...")
+    s.record("answered")
+    r = pipeline.handle("g1", "hi")
+    assert r["status"] == "clarify" and r["citations"] == []
+
 def test_non_procedural_question_gets_no_boost():
     hits = [_h("01-004", 4, 0.73, "* Bookmarks"), _h("01-001", 1, 0.60, "1. Click Help")]
     assert select_context("What does refresh keep?", hits, max_chunks=1)[0]["chunk_id"] == "01-004"

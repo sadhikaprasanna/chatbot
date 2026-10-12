@@ -14,6 +14,15 @@ _FOREIGN_RE = re.compile(r"\b(" + "|".join(re.escape(f) for f in FOREIGN) + r")\
 _FIREFOX_RE = re.compile(r"\b(firefox|ff)\b", re.I)
 _MOBILE_FX_RE = re.compile(r"\bfirefox (for )?(android|ios|focus|relay)\b|\bfirefox (android|ios)\b", re.I)
 
+GREETINGS = {"hi", "hii", "hello", "hey", "good morning", "good afternoon", "good evening"}
+GREETING_MSG = ("Hello! I can help with Firefox and Mozilla VPN or ProtonVPN questions, "
+                "for example refreshing Firefox, clearing the cache, updating, bookmarks, "
+                "add-ons, Sync or VPN refunds. What do you need help with?")
+
+
+def is_greeting(text: str) -> bool:
+    return text.strip().lower().rstrip("!.?") in GREETINGS
+
 VAGUE_EXACT = {"help", "hi", "hello", "hey", "hii", "test", "?", "ok", "okay"}
 VAGUE_PATTERNS = [
     r"^(it|this|that|everything)('?s| is| isn'?t| is not| does ?n'?t| doesn'?t| won'?t)? ?(not )?(working|work|broken|fixed)\b",
@@ -71,8 +80,9 @@ def decide(text: str, retrieved: list[dict], threshold: float | None = None) -> 
     threshold = config.SCORE_THRESHOLD if threshold is None else threshold
     if is_vague(text):
         return Decision("clarify", "vague",
-                        "Could you tell me a bit more? For example, what are you trying to do in Firefox, "
-                        "and what happens when you try?")
+                        "Hello! I can help with Firefox and Mozilla VPN or ProtonVPN questions, "
+                        "for example refreshing Firefox, clearing the cache, updating, bookmarks, "
+                        "add-ons, Sync or VPN refunds. What do you need help with?")
     if mentions_foreign_product(text):
         return Decision("out_of_scope", "foreign_product", OUT_OF_SCOPE_MSG)
     if not retrieved or retrieved[0]["score"] < threshold:

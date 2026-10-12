@@ -157,6 +157,9 @@ def _run(s, message: str, log: dict) -> dict:
     elif dropped:
         final += "\n\nNote: I left out part of my draft answer because it isn't covered in our help articles."
         log["dropped_unsupported"] = True
+    if gate.is_greeting(clean):
+        log["reason"] = "greeting"
+        return _response("clarify", gate.GREETING_MSG)
     s.record("answered", [c["url"] for c in cites])
     return _response("answered", final, cites)
     
